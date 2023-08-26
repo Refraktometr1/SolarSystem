@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ef4675a40bb44c0b74cb72c10f761d5, type: 3}
+  m_Name: Superterran
+  m_EditorClassIdentifier: 
+  MassClassID: 5
+  MaxMass: 10
+  MinMass: 2
+  MaxRadius: 3.3
+  MinRadius: 1.3
+  Prefab: {fileID: 2405953480843017000, guid: 05b741eed7621984c85ecdc644921fe5, type: 3}
+  PrefabRadius: 0.6
+  Material: {fileID: 2100000, guid: 48019462fbf7c9f4292b1627740d41f8, type: 2}

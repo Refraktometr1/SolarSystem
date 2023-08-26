@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ef4675a40bb44c0b74cb72c10f761d5, type: 3}
+  m_Name: Neptunian
+  m_EditorClassIdentifier: 
+  MassClassID: 6
+  MaxMass: 50
+  MinMass: 10
+  MaxRadius: 5.7
+  MinRadius: 2.1
+  Prefab: {fileID: 2405953480843017000, guid: 05b741eed7621984c85ecdc644921fe5, type: 3}
+  PrefabRadius: 0.8
+  Material: {fileID: 2100000, guid: f213a8aeb54c60f4fb940c280cdbd3c8, type: 2}

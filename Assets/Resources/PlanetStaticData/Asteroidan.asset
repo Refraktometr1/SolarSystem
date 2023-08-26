@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ef4675a40bb44c0b74cb72c10f761d5, type: 3}
+  m_Name: Asteroidan
+  m_EditorClassIdentifier: 
+  MassClassID: 1
+  MaxMass: 0.00001
+  MinMass: 0
+  MaxRadius: 0.03
+  MinRadius: 0
+  Prefab: {fileID: 2405953480843017000, guid: 05b741eed7621984c85ecdc644921fe5, type: 3}
+  PrefabRadius: 0.2
+  Material: {fileID: 2100000, guid: 02f272d5e8ff508428baf80fadda022a, type: 2}

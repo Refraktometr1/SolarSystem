@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ef4675a40bb44c0b74cb72c10f761d5, type: 3}
+  m_Name: Jovian
+  m_EditorClassIdentifier: 
+  MassClassID: 7
+  MaxMass: 27
+  MinMass: 3.5
+  MaxRadius: 5000
+  MinRadius: 50
+  Prefab: {fileID: 2405953480843017000, guid: 05b741eed7621984c85ecdc644921fe5, type: 3}
+  PrefabRadius: 1
+  Material: {fileID: 2100000, guid: e26234dfa8f049e4b824674b0f80f41a, type: 2}
