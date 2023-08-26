@@ -2,6 +2,17 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
+SolarSystem/.vs
+SolarSystem/Temp
+SolarSystem/.idea
+SolarSystem/Assembly-CSharp.csproj
+SolarSystem/Assembly-CSharp-Editor.csproj
+SolarSystem/Assets/Plugins/Editor/JetBrains
+SolarSystem/Library
+SolarSystem/Logs
+SolarSystem/obj
+
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
