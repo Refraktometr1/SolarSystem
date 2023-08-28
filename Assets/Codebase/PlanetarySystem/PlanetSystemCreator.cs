@@ -5,8 +5,9 @@ namespace Codebase
 {
     public class PlanetSystemCreator : MonoBehaviour
     {
-        [SerializeField] private double _planetarySystemMass;
-        [SerializeField] private Vector3 _systemPosition;
+        [SerializeField] private double _planetarySystemMass = 10;
+        [SerializeField] private Vector3 _systemPosition = Vector3.zero;
+        [SerializeField] private int RotationSpeed =1 ;
         
         private IPlanetarySystemFactory _planetarySystemFactory;
         private IPlanetarySystem _planetarySystem;
@@ -24,7 +25,7 @@ namespace Codebase
 
         private void Update()
         {
-            _planetarySystem.Update(Time.deltaTime);
+            _planetarySystem.Update(Time.deltaTime * RotationSpeed);
         }
     }
 }

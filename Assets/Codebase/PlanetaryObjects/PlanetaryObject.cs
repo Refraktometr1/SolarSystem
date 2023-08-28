@@ -11,7 +11,7 @@ public class PlanetaryObject : MonoBehaviour , IPlanetaryObject
     
     public void Rotate(float time)
     {
-        transform.RotateAround(SystemCenter,  Vector3.up, time);
+        transform.RotateAround(SystemCenter,  Vector3.up, time * (1 / Vector3.SqrMagnitude(SystemCenter - transform.position)));
     }
 
     public void Init(double planetMass, double planetRadius, MassClass type, Vector3 systemCenter)
