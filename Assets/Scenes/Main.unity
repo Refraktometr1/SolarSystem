@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bd1439bddf44a5a412808e5f70ca95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _planetarySystemMass: 20
+  _planetarySystemMass: 15
   _systemPosition: {x: 0, y: 0, z: 0}
   RotationSpeed: 600
 --- !u!4 &1659005920

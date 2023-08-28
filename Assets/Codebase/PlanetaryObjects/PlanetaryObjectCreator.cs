@@ -19,7 +19,7 @@ namespace Codebase
         }
         
         public IPlanetaryObject CreateRandomPlanetaryObject(int orbitCount, double availableMass,
-            Vector3 systemCenter)
+            GameObject systemCenter)
         {
             var planetaryObjectClass = _staticDataService.GetRandomMassClass();
             var staticData = _staticDataService.GetPlanetaryObjectStaticData(planetaryObjectClass);
@@ -37,12 +37,12 @@ namespace Codebase
 
             var planetRadius = _randomService.GetRandomDouble(staticData.MinRadius, staticData.MaxRadius);
             
-            var planetGameObject =  Object.Instantiate(staticData.Prefab,  systemCenter + Vector3.right * orbitCount, Quaternion.identity);
+            var planetGameObject =  Object.Instantiate(staticData.Prefab,  systemCenter.transform.position + Vector3.right * orbitCount, Quaternion.identity, systemCenter.transform);
             planetGameObject.transform.localScale = Vector3.one * staticData.PrefabRadius;
             planetGameObject.GetComponent<Renderer>().material = staticData.Material;
 
             var planetaryObject = new PlanetaryObject(planetaryObjectMass, planetRadius, planetaryObjectClass,
-                planetGameObject.transform, systemCenter);
+                planetGameObject.transform, systemCenter.transform);
             
             return planetaryObject;
         }

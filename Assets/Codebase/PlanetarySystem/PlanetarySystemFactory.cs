@@ -3,6 +3,8 @@ using System.Linq;
 using UnityEngine;
 using Zenject;
 
+using UnityEngine;
+
 namespace Codebase
 {
     public class PlanetarySystemFactory : IPlanetarySystemFactory
@@ -19,10 +21,13 @@ namespace Codebase
         {
             var planetarySystem = new PlanetarySystem();
             List<IPlanetaryObject> randomPlanetaryObjects = new List<IPlanetaryObject>();
+            GameObject parentGameObject = new GameObject("PlanetaryObjectsSystem");
+            parentGameObject.transform.position = systemPosition;
             
             while (mass > 0)
             {
-                var planetaryObject = _planetaryObjectCreator.CreateRandomPlanetaryObject(randomPlanetaryObjects.Count() + 1, mass, systemPosition);
+                var planetaryObject = _planetaryObjectCreator.CreateRandomPlanetaryObject(randomPlanetaryObjects.Count() + 1, mass, parentGameObject);
+                planetaryObject.GameObjectTransform.SetParent(parentGameObject.transform);
                 randomPlanetaryObjects.Add(planetaryObject);
                 mass -= planetaryObject.Mass;
             }

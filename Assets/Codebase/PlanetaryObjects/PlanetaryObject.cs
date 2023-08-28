@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlanetaryObject : IPlanetaryObject
 {
-    public PlanetaryObject(double mass, double radius, MassClass massClass, Transform gameObjectTransform, Vector3 systemCenter)
+    public PlanetaryObject(double mass, double radius, MassClass massClass, Transform gameObjectTransform, Transform systemCenter)
     {
         Mass = mass;
         Radius = radius;
@@ -17,11 +17,11 @@ public class PlanetaryObject : IPlanetaryObject
     public MassClass MassClass { get;}
     
     public Transform GameObjectTransform { get; set; }
-    
-    public Vector3 SystemCenter { get;}
+
+    private readonly Transform SystemCenter;
     
     public void Rotate(float time)
     {
-        GameObjectTransform.RotateAround(SystemCenter,  Vector3.up, time * (1 / Vector3.SqrMagnitude(SystemCenter - GameObjectTransform.position)));
+        GameObjectTransform.RotateAround(SystemCenter.position,  Vector3.up, time * (1 / Vector3.SqrMagnitude(SystemCenter.position - GameObjectTransform.position)));
     }
 }
