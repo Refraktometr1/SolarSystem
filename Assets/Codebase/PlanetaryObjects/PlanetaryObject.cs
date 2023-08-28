@@ -1,24 +1,27 @@
 using Codebase;
 using UnityEngine;
 
-public class PlanetaryObject : MonoBehaviour , IPlanetaryObject
+public class PlanetaryObject : IPlanetaryObject
 {
-    [field: SerializeField] public double Mass { get; set; }
-    [field: SerializeField] public double Radius { get; private set; }
-    [field: SerializeField] public MassClass MassClass { get; private set; }
+    public PlanetaryObject(double mass, double radius, MassClass massClass, Transform gameObjectTransform, Vector3 systemCenter)
+    {
+        Mass = mass;
+        Radius = radius;
+        MassClass = massClass;
+        GameObjectTransform = gameObjectTransform;
+        SystemCenter = systemCenter;
+    }
+
+    public double Mass { get; set; }
+    public double Radius { get;}
+    public MassClass MassClass { get;}
     
-    [field: SerializeField] public Vector3 SystemCenter { get; private set; }
+    public Transform GameObjectTransform { get; set; }
+    
+    public Vector3 SystemCenter { get;}
     
     public void Rotate(float time)
     {
-        transform.RotateAround(SystemCenter,  Vector3.up, time * (1 / Vector3.SqrMagnitude(SystemCenter - transform.position)));
-    }
-
-    public void Init(double planetMass, double planetRadius, MassClass type, Vector3 systemCenter)
-    {
-        Mass = planetMass;
-        Radius = planetRadius;
-        MassClass = type;
-        SystemCenter = systemCenter;
+        GameObjectTransform.RotateAround(SystemCenter,  Vector3.up, time * (1 / Vector3.SqrMagnitude(SystemCenter - GameObjectTransform.position)));
     }
 }

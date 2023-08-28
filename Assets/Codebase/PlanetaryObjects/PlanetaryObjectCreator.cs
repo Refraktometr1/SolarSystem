@@ -40,8 +40,9 @@ namespace Codebase
             var planetGameObject =  Object.Instantiate(staticData.Prefab,  systemCenter + Vector3.right * orbitCount, Quaternion.identity);
             planetGameObject.transform.localScale = Vector3.one * staticData.PrefabRadius;
             planetGameObject.GetComponent<Renderer>().material = staticData.Material;
-            var planetaryObject = planetGameObject.AddComponent<PlanetaryObject>();
-            planetaryObject.Init(planetaryObjectMass, planetRadius, planetaryObjectClass, systemCenter);
+
+            var planetaryObject = new PlanetaryObject(planetaryObjectMass, planetRadius, planetaryObjectClass,
+                planetGameObject.transform, systemCenter);
             
             return planetaryObject;
         }
