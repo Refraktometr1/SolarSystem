@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Codebase.StaticData;
 using UnityEngine;
 using Zenject;
 
@@ -8,10 +7,10 @@ namespace Codebase
 {
     public class PlanetarySystemFactory : IPlanetarySystemFactory
     {
-        private IPlanetaryObjectCreator _planetaryObjectCreator;
-        
+        private readonly IPlanetaryObjectCreator _planetaryObjectCreator;
+
         [Inject]
-        public void Construct(IStaticDataService staticDataService, IPlanetaryObjectCreator planetaryObjectCreator)
+        public PlanetarySystemFactory(IPlanetaryObjectCreator planetaryObjectCreator)
         {
             _planetaryObjectCreator = planetaryObjectCreator;
         }

@@ -10,18 +10,19 @@ namespace Codebase.StaticData
     public class StaticDataService : IStaticDataService
     {
         private Dictionary<MassClass, PlanetStaticData> _planetaryObjectData;
-        private IRandomService _random;
+        private readonly IRandomService _random;
+
 
         [Inject]
-        public void Construct(IRandomService randomService)
+        public StaticDataService(IRandomService random)
         {
-            _random = randomService;
+            _random = random;
             Load();
         }
 
         private const string PlanetStaticDataPath = "PlanetStaticData";
 
-        public void Load()
+        private void Load()
         {
             _planetaryObjectData = Resources.LoadAll<PlanetStaticData>(PlanetStaticDataPath)
                 .ToDictionary(x => x.MassClassID, x => x);

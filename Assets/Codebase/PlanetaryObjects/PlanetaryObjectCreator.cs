@@ -12,10 +12,10 @@ namespace Codebase
         private IRandomService _randomService;
 
         [Inject]
-        public void Construct(IStaticDataService staticDataService, IRandomService randomService)
+        public PlanetaryObjectCreator(IStaticDataService staticDataService, IRandomService randomService)
         {
-            _randomService = randomService;
             _staticDataService = staticDataService;
+            _randomService = randomService;
         }
         
         public IPlanetaryObject CreateRandomPlanetaryObject(int orbitCount, double availableMass,
